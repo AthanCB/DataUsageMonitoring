@@ -43,6 +43,7 @@ namespace NetworkMonitor.Views
             g.Clear(Color.Transparent);
             g.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SingleBitPerPixelGridFit;
             g.DrawString(((DataMonitorViewModel)DataContext).DataUsed.ToString("##.##"), font, brush, 0,0 );
+            myNotifyIcon.Icon?.Dispose();
             icon = (bitmapText.GetHicon());
             myNotifyIcon.Icon = Icon.FromHandle(icon);
         }
